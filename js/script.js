@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             } else {
                                 wordIsCorrect = false;
                                 // Mark all remaining characters as error once we find a mismatch
-                                checkedWord += `<span class="error">${sampleChars.slice(j).join('')}</span>`;
+                                us += `<span class="error">${sampleChars.slice(j).join('')}</span>`;
                                 break;
                             }
                         } else {
