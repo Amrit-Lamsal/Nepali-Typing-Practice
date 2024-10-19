@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ne">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +8,53 @@
 </head>
 <body>
     <div class="container">
-        <h1>Nepali Typing Practice</h1>
+        <h1>नेपाली टाइपिङ अभ्यास</h1>
+
+        <!-- Custom text input form -->
+        <div class="custom-text-form">
+            <textarea 
+                id="custom-text-input" 
+                placeholder="यहाँ आफ्नो पाठ पेस्ट गर्नुहोस् (अधिकतम १००० शब्दहरू)"
+                rows="4"
+            ></textarea>
+            <div class="word-count-info">शब्दहरू: <span id="word-count-input">0</span>/1000</div>
+            <div class="button-group">
+                <button id="start-custom-text">पाठ सुरु गर्नुहोस्</button>
+                <!-- <button id="start-default-text">डिफल्ट पाठबाट सुरु गर्नुहोस्</button> -->
+            </div>
+        </div>
+
+        <!-- Timer and Stats -->
+        <div class="stats-container">
+            <div class="timer">
+                <span id="minutes">00</span>:<span id="seconds">00</span>
+            </div>
+            <div class="speed-stats">
+                <p>गति: <span id="wpm">0</span> WPM</p>
+                <p>शुद्धता: <span id="accuracy">0</span>%</p>
+            </div>
+        </div>
 
         <!-- Text display container -->
         <div class="text-container">
-            <p id="sample-text">नेपालको राष्ट्रिय भाषा नेपाली हो।</p>
+            <div id="loading">Loading...</div>
+            <p id="sample-text"></p>
         </div>
 
         <!-- User input container -->
-        <textarea id="user-input" placeholder="Type here..."></textarea>
+        <textarea id="user-input" placeholder="यहाँ टाइप गर्नुहोस्..." disabled></textarea>
 
         <div class="count">
-            <p>Correct Words: <span id="correct-count">0</span></p>
-            <p>Mistake Words: <span id="mistake-count">0</span></p>
+            <p>सही शब्दहरू: <span id="correct-count">0</span></p>
+            <p>गलत शब्दहरू: <span id="mistake-count">0</span></p>
+        </div>
+
+        <!-- Control buttons -->
+        <div class="controls">
+            <button id="reset-btn">रिसेट गर्नुहोस्</button>
+            <button id="pause-btn">पज गर्नुहोस्</button>
         </div>
     </div>
-
-    <!-- JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
